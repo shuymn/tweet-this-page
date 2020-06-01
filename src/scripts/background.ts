@@ -1,16 +1,20 @@
-chrome.contextMenus.create({
-  id: "tweet-this-page",
-  title: chrome.i18n.getMessage("menuItemTweetThisPage"),
-});
+const MenuId = {
+  TweetThisPage: "tweet-this-page",
+} as const;
+
+chrome.contextMenus.removeAll(() =>
+  chrome.contextMenus.create({
+    id: MenuId.TweetThisPage,
+    title: chrome.i18n.getMessage("menuItemTweetThisPage"),
+  })
+);
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
-  if (tab === undefined) {
-    return;
-  }
-
-  const { title, url } = tab;
-  if (url !== undefined) {
-    chrome.tabs.create({ url: buildTweetUrl(url, title) });
+  if (info.menuItemId === MenuId.TweetThisPage && tab !== undefined) {
+    const { title, url } = tab;
+    if (url !== undefined) {
+      chrome.tabs.create({ url: buildTweetUrl(url, title) });
+    }
   }
 });
 
