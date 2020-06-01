@@ -36,6 +36,7 @@ jobs:
           }'
 
       - uses: actions/setup-node@v1
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         with:
           node-version: "14.3.0"
 
