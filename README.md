@@ -1,19 +1,10 @@
-# Tweet This Page
+# Tweet This Page ![CI](https://github.com/shuymn/tweet-this-page/workflows/CI/badge.svg)
 
 This is the extension that allows to tweet the current page.
 
-# Features
+# Installation
 
-- Add `Tweet This page` context menu
-
-# Build
-
-## Requirements
-
-- `node`
-- `yarn` or `npm`
-
-## Build the extension
+## Build from source
 
 ```shell
 # Build a release version
@@ -24,6 +15,14 @@ The extension will be built in the following directories.
 
 - `dist` : for Google Chrome
 
+# Features
+
+- Add `Tweet This page` context menu
+
+# Bug Tracker
+
+Report bug at [Issues](https://github.com/shuymn/tweet-this-page/issues)
+
 # License
 
-MIT © shuymn
+MIT © shuymn, see [LICENSE](https://github.com/shuymn/tweet-this-page/blob/master/LICENSE)
