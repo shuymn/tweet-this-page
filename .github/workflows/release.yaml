@@ -1,0 +1,38 @@
+name: Release
+
+on:
+  push:
+    branches:
+      - master
+    tags:
+      - "!*"
+
+jobs:
+  release:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+      - name: Use Node.js
+        uses: actions/setup-node@v1
+        with:
+          node-version: "14.3.0"
+      - name: Install dependencies
+        run: npm ci
+      - name: Build
+        run: npm run build
+      - name: Check version and add tag
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+          REPO: ${{github.repository}}
+          SHA: ${{github.sha}}
+        run: |
+          export TAG=$(cat ./src/manifest.json | grep -w version | cut -d " " -f 4 | tr -d "," | tr -d '"')
+          export API_URL="https://api.github.com/repos/${REPO}/git/refs"
+          curl -s -X POST $API_URL -H "Authorization: token ${GITHUB_TOKEN}" -d ref=refs/tags/${TAG} -d sha=${SHA}
+      - name: Zip the extension
+        run: cd dist && zip -r tweet-this-page.zip .
+      - name: Release
+        env:
+          GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
+        run: npx node-github-release upload --tag ${TAG} --name "Tweet This Page ${TAG}" --file ./dist/tweet-this-page.zip
