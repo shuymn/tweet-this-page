@@ -35,4 +35,6 @@ jobs:
       - name: Release
         env:
           GITHUB_TOKEN: ${{secrets.GITHUB_TOKEN}}
-        run: npx node-github-release upload --tag ${TAG} --name "Tweet This Page ${TAG}" --file ./dist/tweet-this-page.zip
+        run: |
+          npm i -g node-github-release
+          github-release upload --tag ${TAG} --name "Tweet This Page ${TAG}" --file ./dist/tweet-this-page.zip
