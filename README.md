@@ -1,29 +1,26 @@
-# Tweet This Page
+# Tweet This Page ![CI](https://github.com/shuymn/tweet-this-page/workflows/CI/badge.svg)
 
 This is the extension that allows to tweet the current page.
+
+# Installation
+
+- Chrome Web Store(under review)
+
+## Manual
+
+1. Download the zip file from [Releases](https://github.com/shuymn/tweet-this-page/releases)
+2. Unzip
+3. Turn on **Developer Mode** in extensions management page (`chrome://extensions/`)
+4. Put the unziped into **Load unpacked**
 
 # Features
 
 - Add `Tweet This page` context menu
 
-# Build
+# Bug Tracker
 
-## Requirements
-
-- `node`
-- `yarn` or `npm`
-
-## Build the extension
-
-```shell
-# Build a release version
-npm run build
-```
-
-The extension will be built in the following directories.
-
-- `dist` : for Google Chrome
+Report bug at [Issues](https://github.com/shuymn/tweet-this-page/issues)
 
 # License
 
-MIT © shuymn
+MIT © shuymn, see [LICENSE](https://github.com/shuymn/tweet-this-page/blob/master/LICENSE)
