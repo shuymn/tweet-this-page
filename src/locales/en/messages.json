@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Tweet This Page",
+    "description": "Name of the extension."
+  },
+  "extDescription": {
+    "message": "Browser Extension that tweets the current page URL and title.",
+    "description": "Description of the extension."
+  },
+  "menuItemTweetThisPage": {
+    "message": "Tweet This Page",
+    "description": "Title of the context menu."
+  }
+}
