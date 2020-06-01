@@ -4,16 +4,14 @@ This is the extension that allows to tweet the current page.
 
 # Installation
 
-## Build from source
+- Chrome Web Store(under review)
 
-```shell
-# Build a release version
-npm run build
-```
+## Manual
 
-The extension will be built in the following directories.
-
-- `dist` : for Google Chrome
+1. Download the zip file from [Releases](https://github.com/shuymn/tweet-this-page/releases)
+2. Unzip
+3. Turn on **Developer Mode** in extensions management page (`chrome://extensions/`)
+4. Put the unziped into **Load unpacked**
 
 # Features
 
