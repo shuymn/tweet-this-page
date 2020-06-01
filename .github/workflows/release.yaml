@@ -21,12 +21,10 @@ jobs:
           VERSION=$(cat manifest.json | grep -w version | cut -d ' ' -f 4 | tr -d ',' | tr -d '"')
           echo "::set-env name=MANIFEST_VERSION::${VERSION}"
 
-      - name: Check the need for release
-        run: test $RELEASE_VERSION = $MANIFEST_VERSION
-
       - name: Push next release tag
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         run: |
-          curl --request POST \
+          curl --fail --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/git/refs \
           --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
@@ -40,16 +38,20 @@ jobs:
           node-version: "14.3.0"
 
       - name: Install deps
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         run: npm ci
 
       - name: Build
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         run: npm run build
 
       - name: Zip the extension
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         working-directory: ./dist
         run: zip -r tweet-this-page.zip .
 
       - name: Create release
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         id: create_release
         uses: actions/create-release@v1
         env:
@@ -59,6 +61,7 @@ jobs:
           release_name: Release ${{ env.MANIFEST_VERSION }}
 
       - name: Upload release asset
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         uses: actions/upload-release-asset@v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
