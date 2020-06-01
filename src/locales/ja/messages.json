@@ -1,0 +1,14 @@
+{
+  "extName": {
+    "message": "Tweet This Page",
+    "description": "Name of the extension."
+  },
+  "extDescription": {
+    "message": "現在のページをツイートする拡張機能です。",
+    "description": "Description of the extension."
+  },
+  "menuItemTweetThisPage": {
+    "message": "Tweet This Page",
+    "description": "Title of the context menu."
+  }
+}
