@@ -26,10 +26,10 @@ jobs:
         run: |
           curl --fail --request POST \
           --url https://api.github.com/repos/${{ github.repository }}/git/refs \
-          --header 'authorization: Bearer ${{ secrets.GITHUB_TOKEN }}' \
+          --header 'authorization: token ${{ secrets.GITHUB_TOKEN }}' \
           --header 'content-type: application/json' \
           --data '{
-            "ref": "refs/tags/${{ env.MANIFEST_VERSION }}"
+            "ref": "refs/tags/${{ env.MANIFEST_VERSION }}",
             "sha": "${{ github.sha }}"
           }'
 
