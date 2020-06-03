@@ -4,7 +4,7 @@ This is the extension that allows to tweet the current page.
 
 # Installation
 
-- Chrome Web Store(under review)
+- [Chrome Web Store](https://chrome.google.com/webstore/detail/ebddcjemiggiaedelggijfknajbchfah)
 
 ## Manual
 
