@@ -2,7 +2,10 @@
 const path = require("path");
 const CopyPlugin = require("copy-webpack-plugin");
 
-var config = {
+/**
+ * @type import("webpack").Configuration
+ */
+const config = {
   entry: {
     background: path.join(__dirname, "src", "scripts", "background.ts"),
   },
