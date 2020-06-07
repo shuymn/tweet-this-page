@@ -4,7 +4,7 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    asignees:
+    assignees:
       - "shuymn"
     rebase-strategy: "disabled"
     open-pull-requests-limit: 10
@@ -13,7 +13,7 @@ updates:
     directory: "/"
     schedule:
       interval: daily
-    asignees:
+    assignees:
       - "shuymn"
     rebase-strategy: "disabled"
     open-pull-requests-limit: 10
