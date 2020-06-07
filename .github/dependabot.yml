@@ -1,8 +1,19 @@
 version: 2
 updates:
-- package-ecosystem: npm
-  directory: "/"
-  schedule:
-    interval: daily
-    time: '20:00'
-  open-pull-requests-limit: 10
+  - package-ecosystem: npm
+    directory: "/"
+    schedule:
+      interval: daily
+    asignees:
+      - "shuymn"
+    rebase-strategy: "disabled"
+    open-pull-requests-limit: 10
+
+  - package-ecosystem: "github-actions"
+    directory: "/"
+    schedule:
+      interval: daily
+    asignees:
+      - "shuymn"
+    rebase-strategy: "disabled"
+    open-pull-requests-limit: 10
