@@ -3,11 +3,25 @@
   "timezone": "Asia/Tokyo",
   "schedule": ["every weekend"],
   "labels": ["renovate"],
-  "patch": { "automerge": true },
+  "lockFileMaintenance": {
+    "enabled": true
+  },
   "packageRules": [
     {
+      "depTypeList": ["engines", "peerDependencies"],
+      "rangeStrategy": "auto"
+    },
+    {
       "depTypeList": ["devDependencies"],
+      "updateTypes": ["digest", "minor"],
+      "automerge": true
+    },
+    {
+      "updateTypes": ["patch"],
       "automerge": true
     }
-  ]
+  ],
+  "postUpdateOptions": ["gomodTidy", "npmDedupe", "npmDedupeHighest"],
+  "rangeStrategy": "bump"
 }
+
