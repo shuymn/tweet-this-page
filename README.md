@@ -23,4 +23,4 @@ Report bug at [Issues](https://github.com/shuymn/tweet-this-page/issues)
 
 # License
 
-MIT © shuymn, see [LICENSE](https://github.com/shuymn/tweet-this-page/blob/master/LICENSE)
+MIT © shuymn, see [LICENSE](https://github.com/shuymn/tweet-this-page/blob/main/LICENSE)
