@@ -21,7 +21,7 @@ jobs:
         working-directory: ./src
         run: |
           VERSION=$(cat manifest.json | grep -w version | cut -d ' ' -f 4 | tr -d ',' | tr -d '"')
-          echo "::set-env name=MANIFEST_VERSION::${VERSION}"
+          echo "MANIFEST_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Push next release tag
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
