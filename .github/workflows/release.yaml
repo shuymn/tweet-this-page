@@ -15,7 +15,7 @@ jobs:
       - name: Check current release version
         run: |
           VERSION=$(git fetch --tags && git tag | xargs -n1 test -z && echo '0.0.0' || git rev-list --tags --topo-order --max-count=1 | xargs git describe --tags)
-          echo "::set-env name=RELEASE_VERSION::${VERSION}"
+          echo "RELEASE_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Check manifest version
         working-directory: ./src
