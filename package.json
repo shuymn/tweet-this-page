@@ -15,22 +15,22 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "^11.0.0",
-    "@commitlint/config-conventional": "^11.0.0",
+    "@commitlint/cli": "11.0.0",
+    "@commitlint/config-conventional": "11.0.0",
     "@types/chrome": "0.0.126",
-    "@types/node": "^14.14.9",
-    "@typescript-eslint/eslint-plugin": "^4.8.1",
-    "@typescript-eslint/parser": "^4.8.1",
-    "copy-webpack-plugin": "^6.3.2",
-    "eslint": "^7.13.0",
-    "eslint-config-prettier": "^6.15.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-prettier": "^3.1.4",
-    "husky": "^4.3.0",
-    "prettier": "^2.2.0",
-    "ts-loader": "^8.0.11",
-    "typescript": "^4.1.2",
-    "webpack": "^5.6.0",
-    "webpack-cli": "^4.2.0"
+    "@types/node": "14.14.9",
+    "@typescript-eslint/eslint-plugin": "4.8.1",
+    "@typescript-eslint/parser": "4.8.1",
+    "copy-webpack-plugin": "6.3.2",
+    "eslint": "7.13.0",
+    "eslint-config-prettier": "6.15.0",
+    "eslint-plugin-import": "2.22.1",
+    "eslint-plugin-prettier": "3.1.4",
+    "husky": "4.3.0",
+    "prettier": "2.2.0",
+    "ts-loader": "8.0.11",
+    "typescript": "4.1.2",
+    "webpack": "5.6.0",
+    "webpack-cli": "4.2.0"
   }
 }
