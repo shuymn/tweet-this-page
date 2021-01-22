@@ -2,12 +2,13 @@ const MenuId = {
   TweetThisPage: "tweet-this-page",
 } as const;
 
-chrome.contextMenus.removeAll(() =>
+// Register context menu
+chrome.runtime.onInstalled.addListener(() => {
   chrome.contextMenus.create({
-    id: MenuId.TweetThisPage,
+    id: "tweet-this-page",
     title: chrome.i18n.getMessage("menuItemTweetThisPage"),
-  })
-);
+  });
+});
 
 chrome.contextMenus.onClicked.addListener((info, tab) => {
   if (info.menuItemId === MenuId.TweetThisPage && tab !== undefined) {
