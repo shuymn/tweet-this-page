@@ -6,11 +6,11 @@ const CopyPlugin = require("copy-webpack-plugin");
  */
 const config = {
   entry: {
-    background: path.join(__dirname, "src", "scripts", "background.ts"),
+    background: path.join(__dirname, "src/scripts/background.ts"),
   },
   output: {
-    path: path.join(__dirname, "dist", "scripts"),
-    filename: "[name].js",
+    path: path.join(__dirname, "dist"),
+    filename: "scripts/[name].js",
   },
   optimization: {
     splitChunks: {
@@ -31,15 +31,15 @@ const config = {
   plugins: [
     new CopyPlugin({
       patterns: [
-        { from: "./src/manifest.json", to: "../" },
-        { from: "./src/locales", to: "../_locales" },
-        { from: "./src/images", to: "../images" },
+        { from: "./src/manifest.json", to: "./" },
+        { from: "./src/locales", to: "./_locales" },
+        { from: "./src/images", to: "./images" },
       ],
     }),
   ],
 };
 
-module.exports = (env, argv) => {
+module.exports = (_env, argv) => {
   if (argv.mode === "development") {
     config.devtool = "inline-source-map";
   }
