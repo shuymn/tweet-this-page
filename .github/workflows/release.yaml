@@ -18,7 +18,7 @@ jobs:
           echo "RELEASE_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Check manifest version
-        working-directory: ./src
+        working-directory: ./src/static
         run: |
           VERSION=$(cat manifest.json | grep -w version | cut -d ' ' -f 4 | tr -d ',' | tr -d '"')
           echo "MANIFEST_VERSION=${VERSION}" >> $GITHUB_ENV
