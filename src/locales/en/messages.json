@@ -10,5 +10,41 @@
   "menuItemTweetThisPage": {
     "message": "Tweet This Page",
     "description": "Title of the context menu."
+  },
+  "optionTitle": {
+    "message": "Settings",
+    "description": "Title of the popup page(for settings)"
+  },
+  "optionItemMode": {
+    "message": "Mode",
+    "description": "Title of the mode option"
+  },
+  "optionDescriptionMode": {
+    "message": "Select how to open the tweet page.",
+    "description": "Description of the mode option"
+  },
+  "optionLabelMode": {
+    "message": "Mode",
+    "description": "Label of the mode"
+  },
+  "optionLabelEnableAutoClose": {
+    "message": "Close the tab after tweeting",
+    "description": "Label of auto close option"
+  },
+  "optionItemPrefix": {
+    "message": "Prefix",
+    "description": "Title of the prefix option"
+  },
+  "optionDescriptionPrefix": {
+    "message": "Set the wording to be placed at the beginning of the tweet.",
+    "description": "Description of the perfix option"
+  },
+  "optionLabelEnablePrefix": {
+    "message": "Enable",
+    "description": "Label of the prefix option"
+  },
+  "optionLabelPrefixWord": {
+    "message": "Prefix",
+    "description": "Label of the prefix word"
   }
 }

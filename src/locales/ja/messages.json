@@ -10,5 +10,41 @@
   "menuItemTweetThisPage": {
     "message": "Tweet This Page",
     "description": "Title of the context menu."
+  },
+  "optionTitle": {
+    "message": "設定",
+    "description": "Title of the popup page(for settings)"
+  },
+  "optionItemMode": {
+    "message": "モード",
+    "description": "Title of the mode option"
+  },
+  "optionDescriptionMode": {
+    "message": "ツイート投稿ページを開く方法を選択します。",
+    "description": "Description of the mode option"
+  },
+  "optionLabelMode": {
+    "message": "モード",
+    "description": "Title of the mode option"
+  },
+  "optionLabelEnableAutoClose": {
+    "message": "ツイートしたあとにタブを閉じる",
+    "description": "Label of auto close option"
+  },
+  "optionItemPrefix": {
+    "message": "プレフィックス",
+    "description": "Title of the prefix option"
+  },
+  "optionDescriptionPrefix": {
+    "message": "ツイートの文頭に付ける文言を設定します。",
+    "description": "Description of the perfix option"
+  },
+  "optionLabelEnablePrefix": {
+    "message": "プレフィックスを有効にする",
+    "description": "Label of the prefix option"
+  },
+  "optionLabelPrefixWord": {
+    "message": "プレフィックス",
+    "description": "Label of the prefix word"
   }
 }
