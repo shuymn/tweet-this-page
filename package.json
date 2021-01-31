@@ -35,6 +35,6 @@
     "webpack-cli": "4.4.0"
   },
   "dependencies": {
-    "preact": "^10.5.11"
+    "preact": "^10.5.12"
   }
 }
