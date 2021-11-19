@@ -18,7 +18,7 @@
     "@commitlint/cli": "14.1.0",
     "@commitlint/config-conventional": "14.1.0",
     "@types/chrome": "0.0.164",
-    "@types/node": "16.11.7",
+    "@types/node": "16.11.9",
     "@typescript-eslint/eslint-plugin": "5.3.1",
     "@typescript-eslint/parser": "5.3.1",
     "copy-webpack-plugin": "9.1.0",
