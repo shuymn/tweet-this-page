@@ -36,5 +36,8 @@
   },
   "dependencies": {
     "preact": "^10.6.6"
+  },
+  "volta": {
+    "node": "16.14.2"
   }
 }
