@@ -1,9 +1,16 @@
 {
-  "typescript.tsdk": "./node_modules/typescript/lib",
-  "json.schemas": [
-    {
-      "fileMatch": ["/manifest.json"],
-      "url": "http://json.schemastore.org/chrome-manifest"
-    }
-  ]
+  "cSpell.words": [
+    "Vitesse"
+  ],
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "volar.tsPlugin": true,
+  "volar.tsPluginStatus": false,
+  "vite.autoStart": false,
+  "prettier.enable": false,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": true,
+  },
+  "files.associations": {
+    "*.css": "postcss",
+  },
 }
