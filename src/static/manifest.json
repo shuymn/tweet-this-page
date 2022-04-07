@@ -25,7 +25,6 @@
   },
   "permissions": [
     "contextMenus",
-    "tabs",
     "webNavigation",
     "https://twitter.com/intent/tweet?url=*"
   ]
