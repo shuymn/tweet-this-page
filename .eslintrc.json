@@ -23,6 +23,11 @@
       { "alphabetize": { "order": "asc", "caseInsensitive": true } }
     ]
   },
+  "settings": {
+    "jest": {
+      "version": 27
+    }
+  },
   "overrides": [
     {
       "files": ["**/*.ts", "**/*.tsx"],
@@ -35,8 +40,7 @@
         "plugin:import/errors",
         "plugin:import/warnings",
         "plugin:import/typescript",
-        "plugin:prettier/recommended",
-        "prettier/@typescript-eslint"
+        "plugin:prettier/recommended"
       ],
       "plugins": ["@typescript-eslint", "import"],
       "parserOptions": {
