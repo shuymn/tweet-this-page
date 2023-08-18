@@ -16,8 +16,8 @@
     }
   },
   "devDependencies": {
-    "@commitlint/cli": "17.4.4",
-    "@commitlint/config-conventional": "17.4.4",
+    "@commitlint/cli": "17.7.1",
+    "@commitlint/config-conventional": "17.7.0",
     "@types/chrome": "0.0.243",
     "@types/node": "18.17.6",
     "@typescript-eslint/eslint-plugin": "5.55.0",
