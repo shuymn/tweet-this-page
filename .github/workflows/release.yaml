@@ -14,7 +14,7 @@ jobs:
       MANIFEST_VERSION: null
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
 
       - name: Check current release version
         run: |
@@ -40,7 +40,7 @@ jobs:
       - uses: pnpm/action-setup@v4
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
 
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@39370e3970a6d050c480ffad4ff0ed4d3fdee5af # v4
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         with:
           node-version-file: .node-version
@@ -57,7 +57,7 @@ jobs:
       - name: Create release
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         id: create_release
-        uses: actions/create-release@v1.1.4
+        uses: actions/create-release@0cb9c9b65d5d1901c1f53e5e66eaf4afd303e70e # v1.1.4
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
@@ -66,7 +66,7 @@ jobs:
 
       - name: Upload release asset
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
-        uses: actions/upload-release-asset@v1
+        uses: actions/upload-release-asset@e8f9f06c4b078e705bd2ea027f0926603fc9b4d5 # v1
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
