@@ -24,7 +24,7 @@
     "description": "Description of the mode option"
   },
   "optionLabelMode": {
-    "message": "モード",
+    "message": "表示タイプ",
     "description": "Title of the mode option"
   },
   "optionLabelEnableAutoClose": {

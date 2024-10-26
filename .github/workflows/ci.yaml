@@ -9,18 +9,24 @@ on:
 jobs:
   build:
     runs-on: ubuntu-latest
-
     steps:
-      - uses: actions/checkout@v3
-      - name: Use Node.js
-        uses: actions/setup-node@v3.8.1
+      - uses: actions/checkout@v4
+
+      - uses: pnpm/action-setup@v4
+
+      - uses: actions/setup-node@v4
         with:
-          node-version: "16"
+            node-version-file: .node-version
+            cache: pnpm
+
       - name: Install dependencies
-        run: npm ci
+        run: pnpm install
+
       - name: Lint
-        run: npm run lint
-      - name: Typecheck
-        run: npm run typecheck
+        run: pnpm run lint
+
+      - name: Format
+        run: pnpm run format
+
       - name: Build
-        run: npm run build
+        run: pnpm run build
