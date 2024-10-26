@@ -28,6 +28,8 @@ jobs:
 
       - name: Push next release tag
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
+        env:
+          GH_TOKEN: ${{ github.token }}
         run: |
           gh api \
             repos/${{ github.repository}}/git/refs \
