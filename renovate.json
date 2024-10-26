@@ -28,17 +28,17 @@
   },
   "packageRules": [
     {
-      "depTypeList": [
+      "matchDepTypes": [
         "devDependencies"
       ],
-      "updateTypes": [
+      "matchUpdateTypes": [
         "digest",
         "minor"
       ],
       "automerge": true
     },
     {
-      "updateTypes": [
+      "matchUpdateTypes": [
         "patch"
       ],
       "automerge": true
