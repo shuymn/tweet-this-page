@@ -9,49 +9,48 @@ jobs:
   release:
     runs-on: ubuntu-latest
 
+    env:
+      RELEASE_VERSION: null
+      MANIFEST_VERSION: null
+
     steps:
-      - uses: actions/checkout@v3.5.3
+      - uses: actions/checkout@v4
 
       - name: Check current release version
         run: |
           VERSION=$(git fetch --tags && git tag | xargs -n1 test -z && echo '0.0.0' || git rev-list --tags --topo-order --max-count=1 | xargs git describe --tags)
           echo "RELEASE_VERSION=${VERSION}" >> $GITHUB_ENV
 
-      - name: Check manifest version
-        working-directory: ./src/static
+      - name: Check package.json version
         run: |
-          VERSION=$(cat manifest.json | grep -w version | cut -d ' ' -f 4 | tr -d ',' | tr -d '"')
+          VERSION=$(jq -r '.version' package.json)
           echo "MANIFEST_VERSION=${VERSION}" >> $GITHUB_ENV
 
       - name: Push next release tag
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         run: |
-          curl --fail --request POST \
-          --url https://api.github.com/repos/${{ github.repository }}/git/refs \
-          --header 'authorization: token ${{ secrets.GITHUB_TOKEN }}' \
-          --header 'content-type: application/json' \
-          --data '{
-            "ref": "refs/tags/${{ env.MANIFEST_VERSION }}",
-            "sha": "${{ github.sha }}"
-          }'
+          gh api \
+            repos/${{ github.repository}}/git/refs \
+            --method POST \
+            --field ref="refs/tags/${{ env.MANIFEST_VERSION}}" \
+            --field sha="${{ github.sha }}"
 
-      - uses: actions/setup-node@v3.8.1
+      - uses: pnpm/action-setup@v4
+        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
+
+      - uses: actions/setup-node@v4
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
         with:
-          node-version: "16"
+          node-version-file: .node-version
+          cache: pnpm
 
-      - name: Install deps
+      - name: Install dependencies
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
-        run: npm ci
+        run: pnpm install
 
-      - name: Build
+      - name: Build and zip the extension
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
-        run: npm run build
-
-      - name: Zip the extension
-        if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
-        working-directory: ./dist
-        run: zip -r tweet-this-page.zip .
+        run: pnpm run zip
 
       - name: Create release
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
@@ -70,6 +69,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/tweet-this-page.zip
-          asset_name: tweet-this-page.zip
+          asset_path: ./dist/tweet-this-page-${{ env.MANIFEST_VERSION }}-chrome.zip
+          asset_name: tweet-this-page-${{ env.MANIFEST_VERSION }}-chrome.zip
           asset_content_type: application/zip

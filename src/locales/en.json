@@ -24,7 +24,7 @@
     "description": "Description of the mode option"
   },
   "optionLabelMode": {
-    "message": "Mode",
+    "message": "Open Style",
     "description": "Label of the mode"
   },
   "optionLabelEnableAutoClose": {
