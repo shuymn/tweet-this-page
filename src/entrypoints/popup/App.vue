@@ -20,10 +20,10 @@
 </template>
 
 <script lang="ts" setup>
-import { Settings } from 'lucide-vue-next';
-import ModeSection from '@/components/ModeSection.vue';
-import PrefixSection from '@/components/PrefixSection.vue';
-import ThemeSwitcher from '@/components/ThemeSwitcher.vue';
+import { Settings } from "lucide-vue-next";
+import ModeSection from "@/components/ModeSection.vue";
+import PrefixSection from "@/components/PrefixSection.vue";
+import ThemeSwitcher from "@/components/ThemeSwitcher.vue";
 
 const store = useOptionsStore();
 </script>

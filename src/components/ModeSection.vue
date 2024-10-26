@@ -22,7 +22,7 @@
 </template>
 
 <script lang="ts" setup>
-import { Mode } from "@/utils/storage"
+import { Mode } from "@/utils/storage";
 import { useOptionsStore } from "@/utils/store";
 import { storeToRefs } from "pinia";
 
@@ -31,15 +31,15 @@ const { mode, enableAutoClose } = storeToRefs(store);
 
 watch(mode, async (value, oldValue) => {
   if (value !== oldValue) {
-    await store.updateMode(value)
+    await store.updateMode(value);
   }
-})
+});
 
 watch(enableAutoClose, async (value, oldValue) => {
   if (value !== oldValue) {
-    await store.updateEnableAutoClose(value)
+    await store.updateEnableAutoClose(value);
   }
-})
+});
 
 const modes = ref([Mode.Tab, Mode.Window]);
 </script>

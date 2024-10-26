@@ -15,35 +15,38 @@
 </template>
 
 <script lang="ts" setup>
-import { Computer, Sun, Moon } from 'lucide-vue-next';
-import { storeToRefs } from 'pinia';
-import { Theme } from '@/utils/storage';
+import { Computer, Sun, Moon } from "lucide-vue-next";
+import { storeToRefs } from "pinia";
+import { Theme } from "@/utils/storage";
 
-const store = useOptionsStore()
-const { theme } = storeToRefs(store)
+const store = useOptionsStore();
+const { theme } = storeToRefs(store);
 
 const themeOptions = [
-  { value: Theme.System, label: 'System', icon: Computer },
-  { value: Theme.Light, label: 'Light', icon: Sun },
-  { value: Theme.Dark, label: 'Dark', icon: Moon }
+  { value: Theme.System, label: "System", icon: Computer },
+  { value: Theme.Light, label: "Light", icon: Sun },
+  { value: Theme.Dark, label: "Dark", icon: Moon },
 ];
 
 const currentThemeIcon = computed(() => {
   switch (theme.value) {
-    case Theme.Light: return Sun;
-    case Theme.Dark: return Moon;
-    default: return Computer;
+    case Theme.Light:
+      return Sun;
+    case Theme.Dark:
+      return Moon;
+    default:
+      return Computer;
   }
 });
 
 const handleThemeChange = (value: Event) => {
-  const btn = value.currentTarget as HTMLButtonElement | null
+  const btn = value.currentTarget as HTMLButtonElement | null;
   if (!btn) {
-    return
+    return;
   }
-  const theme = btn.textContent?.trim().toLowerCase()
+  const theme = btn.textContent?.trim().toLowerCase();
   if (theme) {
-    store.updateTheme(theme as Theme)
+    store.updateTheme(theme as Theme);
   }
-}
+};
 </script>

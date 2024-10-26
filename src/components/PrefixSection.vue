@@ -29,20 +29,20 @@
 import { useOptionsStore } from "@/utils/store";
 import { storeToRefs } from "pinia";
 
-const store = useOptionsStore()
-const { enablePrefix, prefixWord } = storeToRefs(store)
+const store = useOptionsStore();
+const { enablePrefix, prefixWord } = storeToRefs(store);
 
 watch(enablePrefix, async (value, oldValue) => {
   if (value !== oldValue) {
-    await store.updateEnablePrefix(value)
+    await store.updateEnablePrefix(value);
   }
-})
+});
 
 watch(prefixWord, async (value, oldValue) => {
   if (value !== oldValue) {
-    await store.updatePrefixWord(value)
+    await store.updatePrefixWord(value);
   }
-})
+});
 </script>
 
 <style scoped></style>
