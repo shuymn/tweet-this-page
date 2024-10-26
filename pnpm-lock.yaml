@@ -25,34 +25,34 @@ importers:
         version: 3.5.12(typescript@5.6.3)
     devDependencies:
       '@biomejs/biome':
-        specifier: ^1.9.4
+        specifier: 1.9.4
         version: 1.9.4
       '@types/chrome':
-        specifier: ^0.0.279
+        specifier: 0.0.279
         version: 0.0.279
       '@wxt-dev/module-vue':
-        specifier: ^1.0.1
+        specifier: 1.0.1
         version: 1.0.1(vite@5.4.10(@types/node@22.8.1))(vue@3.5.12(typescript@5.6.3))(wxt@0.19.13(@types/node@22.8.1)(rollup@4.24.0))
       autoprefixer:
-        specifier: ^10.4.20
+        specifier: 10.4.20
         version: 10.4.20(postcss@8.4.47)
       daisyui:
-        specifier: ^4.12.13
+        specifier: 4.12.13
         version: 4.12.13(postcss@8.4.47)
       postcss:
-        specifier: ^8.4.47
+        specifier: 8.4.47
         version: 8.4.47
       tailwindcss:
-        specifier: ^3.4.14
+        specifier: 3.4.14
         version: 3.4.14
       typescript:
-        specifier: ^5.6.3
+        specifier: 5.6.3
         version: 5.6.3
       vue-tsc:
-        specifier: ^2.1.8
+        specifier: 2.1.8
         version: 2.1.8(typescript@5.6.3)
       wxt:
-        specifier: ^0.19.11
+        specifier: 0.19.13
         version: 0.19.13(@types/node@22.8.1)(rollup@4.24.0)
 
 packages:
