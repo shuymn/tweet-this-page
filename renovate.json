@@ -11,7 +11,7 @@
   "prHourlyLimit": 0,
   "prConcurrentLimit": 5,
   "labels": [
-    "renovate"
+    "dependencies"
   ],
   "major": {
     "minimumReleaseAge": "5 days"

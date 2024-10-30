@@ -1,35 +1,39 @@
 import { sendMessage } from "@/utils/messaging";
 
 const clickHandler = async (event: MouseEvent) => {
-  const tweetButton = event.target as Element | null;
-  if (tweetButton?.closest("[data-testid='tweetButton']")) {
-    await sendMessage("closeTweetTab", undefined).catch((err) => {
-      console.error(err);
-      document.removeEventListener("click", clickHandler);
-    });
+  try {
+    const tweetButton = event.target as Element | null;
+    if (tweetButton?.closest("[data-testid='tweetButton']")) {
+      await sendMessage("closeTweetTab", undefined);
+    }
+  } catch (err) {
+    console.error(err);
+    document.removeEventListener("click", clickHandler);
   }
 };
 
 const keydownHandler = async (event: KeyboardEvent) => {
-  const isMac = await sendMessage("isMac", undefined);
-  const isCmdOrCtrl = isMac ? event.metaKey : event.ctrlKey;
+  try {
+    const isMac = await sendMessage("isMac", undefined);
+    const isCmdOrCtrl = isMac ? event.metaKey : event.ctrlKey;
 
-  if (isCmdOrCtrl && event.key === "Enter") {
-    const activeElement = document.activeElement;
-    if (!activeElement) {
-      return;
+    if (isCmdOrCtrl && event.key === "Enter") {
+      const activeElement = document.activeElement;
+      if (!activeElement) {
+        return;
+      }
+
+      const isTweetInput =
+        activeElement.matches('[data-testid="tweetTextarea_0"]') ||
+        activeElement.closest('[role="textbox"]') !== null;
+
+      if (isTweetInput) {
+        await sendMessage("closeTweetTab", undefined);
+      }
     }
-
-    const isTweetInput =
-      activeElement.matches('[data-testid="tweetTextarea_0"]') ||
-      activeElement.closest('[role="textbox"]') !== null;
-
-    if (isTweetInput) {
-      await sendMessage("closeTweetTab", undefined).catch((err) => {
-        console.error(err);
-        document.removeEventListener("keydown", keydownHandler);
-      });
-    }
+  } catch (err) {
+    console.error(err);
+    document.removeEventListener("keydown", keydownHandler);
   }
 };
 
@@ -40,7 +44,7 @@ export default defineContentScript({
     "https://twitter.com/intent/post?url=*",
     "https://twitter.com/intent/tweet?url=*",
   ],
-  async main() {
+  async main(ctx) {
     const currentValue = await getEnableAutoClose();
     const currentHref = location.href;
 
@@ -63,5 +67,11 @@ export default defineContentScript({
 
     // watch submit by keyboard
     document.addEventListener("keydown", keydownHandler);
+
+    // cleanup
+    ctx.onInvalidated(() => {
+      document.removeEventListener("click", clickHandler);
+      document.removeEventListener("keydown", keydownHandler);
+    });
   },
 });

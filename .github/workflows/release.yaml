@@ -12,9 +12,16 @@ jobs:
     env:
       RELEASE_VERSION: null
       MANIFEST_VERSION: null
+      EXTENSION_NAME: null
+      OUTDIR: dist
 
     steps:
       - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4
+
+      - name: Set extension name
+        run: |
+          NAME=$(jq -r '.name' package.json)
+          echo "EXTENSION_NAME=${NAME}" >> $GITHUB_ENV
 
       - name: Check current release version
         run: |
@@ -71,6 +78,6 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
         with:
           upload_url: ${{ steps.create_release.outputs.upload_url }}
-          asset_path: ./dist/tweet-this-page-${{ env.MANIFEST_VERSION }}-chrome.zip
-          asset_name: tweet-this-page-${{ env.MANIFEST_VERSION }}-chrome.zip
+          asset_path: ./${{ env.OUTDIR }}/${{ env.EXTENSION_NAME }}-${{ env.MANIFEST_VERSION }}-chrome.zip
+          asset_name: ${{ env.EXTENSION_NAME }}-${{ env.MANIFEST_VERSION }}-chrome.zip
           asset_content_type: application/zip
