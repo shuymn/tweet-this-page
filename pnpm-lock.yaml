@@ -13,7 +13,7 @@ importers:
         version: 2.0.2
       '@wxt-dev/i18n':
         specifier: ^0.2.2
-        version: 0.2.2(wxt@0.19.13(@types/node@22.8.1)(rollup@4.24.2))
+        version: 0.2.3(wxt@0.19.13(@types/node@22.8.1)(rollup@4.24.2))
       lucide-vue-next:
         specifier: ^0.453.0
         version: 0.453.0(vue@3.5.12(typescript@5.6.3))
@@ -565,8 +565,8 @@ packages:
   '@webext-core/messaging@2.0.2':
     resolution: {integrity: sha512-915LXfDSB6Gx/ahTVB3ajCGPb4G3xz0rJmGiM6zDR9ULdHoCYmW2Xi+kmAD2WaQ65alit1uYEiGzzEuZiSqpvA==}
 
-  '@wxt-dev/i18n@0.2.2':
-    resolution: {integrity: sha512-ElSY9xZ53L8Rm2/j6+WT4rkYif8UDC4nR7h2NODX2fmbz9Nl8X2A56BoYfrcs5i7bF5DZ+k0M69HrhzGBVLNcg==}
+  '@wxt-dev/i18n@0.2.3':
+    resolution: {integrity: sha512-2X005PB1r+6sDYMOuZD5hxSOPkogEZZTLB5HEsOotQ5RYXF3c/OOMD+DffVeq+S0yKY2Dmg4Ujfu0Pq4busJYQ==}
     peerDependencies:
       wxt: '>=0.19.7'
     peerDependenciesMeta:
@@ -2888,7 +2888,7 @@ snapshots:
       uid: 2.0.2
       webextension-polyfill: 0.10.0
 
-  '@wxt-dev/i18n@0.2.2(wxt@0.19.13(@types/node@22.8.1)(rollup@4.24.2))':
+  '@wxt-dev/i18n@0.2.3(wxt@0.19.13(@types/node@22.8.1)(rollup@4.24.2))':
     dependencies:
       chokidar: 3.6.0
       confbox: 0.1.8
