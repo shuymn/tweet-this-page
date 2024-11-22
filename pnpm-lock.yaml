@@ -31,8 +31,8 @@ importers:
         specifier: 0.0.283
         version: 0.0.283
       '@wxt-dev/module-vue':
-        specifier: 1.0.1
-        version: 1.0.1(vite@5.4.11(@types/node@22.9.0))(vue@3.5.13(typescript@5.6.3))(wxt@0.19.15(@types/node@22.9.0)(rollup@4.27.2))
+        specifier: 1.0.2
+        version: 1.0.2(vite@5.4.11(@types/node@22.9.0))(vue@3.5.13(typescript@5.6.3))(wxt@0.19.15(@types/node@22.9.0)(rollup@4.27.2))
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -573,10 +573,10 @@ packages:
       wxt:
         optional: true
 
-  '@wxt-dev/module-vue@1.0.1':
-    resolution: {integrity: sha512-tGEs1nCVwZ3qvDC2eBqfhWsEB/Wiqz6wFbsyK91w/dW3djsYvz3VO7xs+LNZPKqqXZg6CE81KpyLwzUJC+JhQQ==}
+  '@wxt-dev/module-vue@1.0.2':
+    resolution: {integrity: sha512-eRRpPgrakgQSfzR8AnmT3+Dd/ltgghOzgfy1MrHl0zZ2Pc2rcuwcoeFt9rrpjH3KuvZfYD2JIAg3gY9OlTPkmQ==}
     peerDependencies:
-      wxt: '>=0.18.6'
+      wxt: '>=0.19.16'
 
   '@wxt-dev/storage@1.0.0':
     resolution: {integrity: sha512-Pr0nZUnA6ElAIq5yl+GdZfvhAI3/wXf7ZdwOHShI2VtDirfgo+tBFQZ123f86l5i81v7FfvrQi3WFSzojcRsJw==}
@@ -2897,7 +2897,7 @@ snapshots:
     optionalDependencies:
       wxt: 0.19.15(@types/node@22.9.0)(rollup@4.27.2)
 
-  '@wxt-dev/module-vue@1.0.1(vite@5.4.11(@types/node@22.9.0))(vue@3.5.13(typescript@5.6.3))(wxt@0.19.15(@types/node@22.9.0)(rollup@4.27.2))':
+  '@wxt-dev/module-vue@1.0.2(vite@5.4.11(@types/node@22.9.0))(vue@3.5.13(typescript@5.6.3))(wxt@0.19.15(@types/node@22.9.0)(rollup@4.27.2))':
     dependencies:
       '@vitejs/plugin-vue': 5.2.0(vite@5.4.11(@types/node@22.9.0))(vue@3.5.13(typescript@5.6.3))
       wxt: 0.19.15(@types/node@22.9.0)(rollup@4.27.2)
