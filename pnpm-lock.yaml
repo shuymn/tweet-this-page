@@ -13,7 +13,7 @@ importers:
         version: 2.1.0
       '@wxt-dev/i18n':
         specifier: ^0.2.2
-        version: 0.2.3(wxt@0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))
+        version: 0.2.3(wxt@0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))
       lucide-vue-next:
         specifier: ^0.453.0
         version: 0.453.0(vue@3.5.13(typescript@5.7.2))
@@ -32,7 +32,7 @@ importers:
         version: 0.0.287
       '@wxt-dev/module-vue':
         specifier: 1.0.2
-        version: 1.0.2(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))(wxt@0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))
+        version: 1.0.2(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))(wxt@0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))
       autoprefixer:
         specifier: 10.4.20
         version: 10.4.20(postcss@8.4.49)
@@ -52,8 +52,8 @@ importers:
         specifier: 2.1.10
         version: 2.1.10(typescript@5.7.2)
       wxt:
-        specifier: 0.19.17
-        version: 0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
+        specifier: 0.19.18
+        version: 0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
 
 packages:
 
@@ -2584,8 +2584,8 @@ packages:
       utf-8-validate:
         optional: true
 
-  wxt@0.19.17:
-    resolution: {integrity: sha512-yM02qn+8F3QpJTTTDhmCUPTl6EnPwVpkCV1XFj5Ol2oUM5OIy4puwg/IdAz6QtK/3XMZzN1E8va73NtZu8WiBQ==}
+  wxt@0.19.18:
+    resolution: {integrity: sha512-9x4T8gartmJjKyuSyRJEAlvL0B7t2B12bLkc8bYIA3PrqoGdPbkcMxGhMfXTZ5OH8aH5Axbs8qw0ckTIOF9JMw==}
     hasBin: true
 
   xdg-basedir@5.1.0:
@@ -3130,18 +3130,18 @@ snapshots:
       uid: 2.0.2
       webextension-polyfill: 0.10.0
 
-  '@wxt-dev/i18n@0.2.3(wxt@0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))':
+  '@wxt-dev/i18n@0.2.3(wxt@0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))':
     dependencies:
       chokidar: 3.6.0
       confbox: 0.1.8
       fast-glob: 3.3.2
     optionalDependencies:
-      wxt: 0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
+      wxt: 0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
 
-  '@wxt-dev/module-vue@1.0.2(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))(wxt@0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))':
+  '@wxt-dev/module-vue@1.0.2(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))(wxt@0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1))':
     dependencies:
       '@vitejs/plugin-vue': 5.2.1(vite@6.0.1(@types/node@22.10.1)(jiti@1.21.6)(yaml@2.6.1))(vue@3.5.13(typescript@5.7.2))
-      wxt: 0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
+      wxt: 0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1)
     transitivePeerDependencies:
       - vite
       - vue
@@ -5074,7 +5074,7 @@ snapshots:
 
   ws@8.18.0: {}
 
-  wxt@0.19.17(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1):
+  wxt@0.19.18(@types/node@22.10.1)(rollup@4.28.0)(yaml@2.6.1):
     dependencies:
       '@aklinker1/rollup-plugin-visualizer': 5.12.0(rollup@4.28.0)
       '@types/chrome': 0.0.280
