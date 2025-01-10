@@ -28,8 +28,8 @@ importers:
         specifier: 1.9.4
         version: 1.9.4
       '@types/chrome':
-        specifier: 0.0.289
-        version: 0.0.289
+        specifier: 0.0.290
+        version: 0.0.290
       '@wxt-dev/module-vue':
         specifier: 1.0.2
         version: 1.0.2(vite@6.0.7(@types/node@22.10.5)(jiti@1.21.7)(yaml@2.7.0))(vue@3.5.13(typescript@5.7.2))(wxt@0.19.23(@types/node@22.10.5)(rollup@4.29.2)(yaml@2.7.0))
@@ -622,8 +622,8 @@ packages:
   '@types/chrome@0.0.280':
     resolution: {integrity: sha512-AotSmZrL9bcZDDmSI1D9dE7PGbhOur5L0cKxXd7IqbVizQWCY4gcvupPUVsQ4FfDj3V2tt/iOpomT9EY0s+w1g==}
 
-  '@types/chrome@0.0.289':
-    resolution: {integrity: sha512-JQifH2d4TFeIZ+ySBSQxCd4D+J6W0jIAyQipAzG1up4O7WApTYrBqnmpNbMqFR5f70wJ1FE6+axqtpfTtPzy/g==}
+  '@types/chrome@0.0.290':
+    resolution: {integrity: sha512-N92vsAdlwoWameDQ8D4K0EZXXvxsJ1+gJg+4TWjUUsZ6gpontVmwl1XVtysA3mso45Fcn5UPiX/yqiT8GcBV3A==}
 
   '@types/estree@1.0.6':
     resolution: {integrity: sha512-AYnb1nQyY49te+VRAVgmzfcgjYS91mY5P0TKUDCLEM+gNnA+3T6rWITXRLYCpahpqSQbN5cE+gHpnPyXjHWxcw==}
@@ -3043,7 +3043,7 @@ snapshots:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
 
-  '@types/chrome@0.0.289':
+  '@types/chrome@0.0.290':
     dependencies:
       '@types/filesystem': 0.0.36
       '@types/har-format': 1.2.16
