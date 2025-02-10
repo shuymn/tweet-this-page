@@ -21,7 +21,7 @@
   "dependencies": {
     "@webext-core/messaging": "^2.0.2",
     "@wxt-dev/i18n": "^0.2.2",
-    "lucide-vue-next": "^0.453.0",
+    "lucide-vue-next": "^0.475.0",
     "pinia": "^2.2.4",
     "vue": "^3.5.12"
   },
