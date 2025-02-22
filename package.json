@@ -35,7 +35,7 @@
     "tailwindcss": "3.4.17",
     "typescript": "5.7.3",
     "vue-tsc": "2.2.2",
-    "wxt": "0.19.26"
+    "wxt": "0.19.27"
   },
   "packageManager": "pnpm@9.12.3"
 }
