@@ -44,7 +44,7 @@ jobs:
             --field ref="refs/tags/${{ env.MANIFEST_VERSION}}" \
             --field sha="${{ github.sha }}"
 
-      - uses: pnpm/action-setup@v4
+      - uses: pnpm/action-setup@a7487c7e89a18df4991f7f222e4898a00d66ddda # v4
         if: ${{ success() && env.RELEASE_VERSION != env.MANIFEST_VERSION }}
 
       - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020 # v4
