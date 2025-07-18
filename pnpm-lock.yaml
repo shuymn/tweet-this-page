@@ -13,7 +13,7 @@ importers:
         version: 2.2.0
       '@wxt-dev/i18n':
         specifier: ^0.2.2
-        version: 0.2.3(wxt@0.19.28(@types/node@22.13.8)(rollup@4.34.9)(yaml@2.7.0))
+        version: 0.2.4(wxt@0.19.28(@types/node@22.13.8)(rollup@4.34.9)(yaml@2.7.0))
       lucide-vue-next:
         specifier: ^0.523.0
         version: 0.523.0(vue@3.5.13(typescript@5.8.3))
@@ -735,8 +735,11 @@ packages:
   '@webext-core/messaging@2.2.0':
     resolution: {integrity: sha512-CRKFSH8ZAp55QpzfseOO/RlW6fAVSGWYNJK1j23khB855Ba9wHu8PB3uuqMVZtfEAwAmsw/2U8HIkony5adFBQ==}
 
-  '@wxt-dev/i18n@0.2.3':
-    resolution: {integrity: sha512-2X005PB1r+6sDYMOuZD5hxSOPkogEZZTLB5HEsOotQ5RYXF3c/OOMD+DffVeq+S0yKY2Dmg4Ujfu0Pq4busJYQ==}
+  '@wxt-dev/browser@0.0.318':
+    resolution: {integrity: sha512-rVZBWikRK8tkVOmvR1gCSMvN5omsIAt4L1Je32I/wl4yJgAcu3xb3ZjJceRWiXUNPvjH1vWfQbEUQD7+nJ2cCg==}
+
+  '@wxt-dev/i18n@0.2.4':
+    resolution: {integrity: sha512-qYWCRlMcRY/fCcwYpPcZV55NHFlri8K+eJqS/0bhHnDClWkiYHyYnIzI0tMeNdXCCo8oyKQr+qhrVM/LKNRymw==}
     peerDependencies:
       wxt: '>=0.19.7'
     peerDependenciesMeta:
@@ -1024,8 +1027,8 @@ packages:
   confbox@0.1.8:
     resolution: {integrity: sha512-RMtmw0iFkeR4YV+fUOSucriAQNb9g8zFR52MWCtl+cCZOFRNL6zeB395vPzFhEjjn4fMxXudmELnl/KF/WrK6w==}
 
-  confbox@0.2.1:
-    resolution: {integrity: sha512-hkT3yDPFbs95mNCy1+7qNKC6Pro+/ibzYxtM2iqEigpf0sVw+bg4Zh9/snjsBcf990vfIsg5+1U7VyiyBb3etg==}
+  confbox@0.2.2:
+    resolution: {integrity: sha512-1NB+BKqhtNipMsov4xI/NnhCKp9XG9NamYp5PVm9klAT0fsrNPjaFICsCFhNhwZJKNh7zB/3q8qXz0E9oaMNtQ==}
 
   config-chain@1.1.13:
     resolution: {integrity: sha512-qj+f8APARXHrM0hraqXYb2/bOVSV4PvJQlNZ/DVj0QrmNM2q2euizkeuVckQ57J+W0mRH6Hvi+k50M4Jul2VRQ==}
@@ -3229,10 +3232,16 @@ snapshots:
       uid: 2.0.2
       webextension-polyfill: 0.10.0
 
-  '@wxt-dev/i18n@0.2.3(wxt@0.19.28(@types/node@22.13.8)(rollup@4.34.9)(yaml@2.7.0))':
+  '@wxt-dev/browser@0.0.318':
     dependencies:
-      chokidar: 3.6.0
-      confbox: 0.1.8
+      '@types/filesystem': 0.0.36
+      '@types/har-format': 1.2.16
+
+  '@wxt-dev/i18n@0.2.4(wxt@0.19.28(@types/node@22.13.8)(rollup@4.34.9)(yaml@2.7.0))':
+    dependencies:
+      '@wxt-dev/browser': 0.0.318
+      chokidar: 4.0.3
+      confbox: 0.2.2
       fast-glob: 3.3.3
     optionalDependencies:
       wxt: 0.19.28(@types/node@22.13.8)(rollup@4.34.9)(yaml@2.7.0)
@@ -3528,7 +3537,7 @@ snapshots:
 
   confbox@0.1.8: {}
 
-  confbox@0.2.1: {}
+  confbox@0.2.2: {}
 
   config-chain@1.1.13:
     dependencies:
@@ -4599,7 +4608,7 @@ snapshots:
 
   pkg-types@2.1.0:
     dependencies:
-      confbox: 0.2.1
+      confbox: 0.2.2
       exsolve: 1.0.2
       pathe: 2.0.3
 
