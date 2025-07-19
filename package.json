@@ -27,7 +27,7 @@
   },
   "devDependencies": {
     "@biomejs/biome": "1.9.4",
-    "@types/chrome": "0.1.0",
+    "@types/chrome": "0.1.1",
     "@wxt-dev/module-vue": "1.0.2",
     "autoprefixer": "10.4.21",
     "daisyui": "4.12.24",
